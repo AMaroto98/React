@@ -1,15 +1,12 @@
 // import './App.css'
 
-import {
-  resetGameFromStorage,
-  saveGameToStorage,
-} from "./logic/storage/index.js";
+import { resetGameFromStorage, saveGameToStorage, } from "./logic/storage/index.js";
 import { checkWinnerFrom, checkEndGame } from "./logic/board.js";
 import { WinnerModal } from "./components/WinnerModal.jsx";
 import { Square } from "./components/Square.jsx";
 import confetti from "canvas-confetti";
 import { TURNS } from "./constants.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   // LOS HOOKS (useState) NUNCA DEBEN ESTAR DENTRO DE IFs
@@ -66,6 +63,10 @@ function App() {
       setWinner(false); // Empate
     }
   };
+
+  useEffect(() => {
+    console.log('UseEffect');
+  }, [turn])
 
   return (
     <main className="board">
