@@ -1,0 +1,23 @@
+/* Poner en columna y centrado */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui;
+}
+
+/* Poner uno al lado del otro centrado */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+section img {
+    max-width: 3210px;
+    height: auto;
+}
