@@ -10,7 +10,8 @@ main {
 }
 
 /* Poner uno al lado del otro centrado */
-section {
+/* Para usar esto meter el contenido del main dentro de un section */
+/* section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,4 +21,4 @@ section {
 section img {
     max-width: 3210px;
     height: auto;
-}
+} */
