@@ -4,6 +4,7 @@ import { TwitterFollowCard } from "./TwitterFollowCard";
 export function App() {
 
   const antonioMaroto = { isFollowing: true, userName: 'AMaroto98'}
+  
   return (
     <section className="App">
 
