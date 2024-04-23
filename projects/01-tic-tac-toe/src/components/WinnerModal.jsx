@@ -1,9 +1,9 @@
-import { Square } from '../components/Square.jsx'
+import { Square } from "../components/Square.jsx";
 
-export function WinnerModal({winner, resetGame}) {
-  
+// eslint-disable-next-line react/prop-types
+export function WinnerModal({ winner, resetGame }) {
   if (winner === null) return null;
-  const winnerText = winner === false ? "Empate" : "Ganó"
+  const winnerText = winner === false ? "Empate" : "Ganó";
 
   return (
     <section className="winner">
@@ -17,5 +17,3 @@ export function WinnerModal({winner, resetGame}) {
     </section>
   );
 }
-
-

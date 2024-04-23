@@ -1,6 +1,7 @@
-// import './App.css'
-
-import { resetGameFromStorage, saveGameToStorage, } from "./logic/storage/index.js";
+import {
+  resetGameFromStorage,
+  saveGameToStorage,
+} from "./logic/storage/index.js";
 import { checkWinnerFrom, checkEndGame } from "./logic/board.js";
 import { WinnerModal } from "./components/WinnerModal.jsx";
 import { Square } from "./components/Square.jsx";
@@ -65,8 +66,8 @@ function App() {
   };
 
   useEffect(() => {
-    console.log('UseEffect');
-  }, [turn])
+    console.log("UseEffect");
+  }, [turn]);
 
   return (
     <main className="board">
