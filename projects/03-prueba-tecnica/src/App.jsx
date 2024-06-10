@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { getRandomFact } from "./services/facts";
-import { useCatImage } from "./hooks/useCatImage";
+import { useCatImage, useCatFact } from "./hooks/useCatImage";
 
 export function App() {
-  const [fact, setFact] = useState();
-  const { imageUrl } = useCatImage({ fact })
+  const { fact, refreshFact } = useCatFact();
+  const { imageUrl } = useCatImage({ fact });
 
   const handleClick = async () => {
-    const newFact = await getRandomFact();
-    setFact(newFact);
+    refreshFact();
   };
 
   // Para hacer el fetch de datos usamos un useEffect pues si en lugar de hacer un fetch dentro el useEffect lo hacemos fuera cada vez que se renderiza el componente se haría el fetch y hariamos un bucle infinito
@@ -18,9 +15,9 @@ export function App() {
   // fetch('https://catfact.ninja/fact')
 
   // Esto bien
-  useEffect(() => {
-    getRandomFact().then((newFact) => setFact(newFact));
-  }, []);
+  // useEffect(() => {
+  //   getRandomFact().then((newFact) => setFact(newFact));
+  // }, []);
 
   return (
     <main>
